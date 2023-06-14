@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-def app():
+def get_app():
     app = Flask(__name__,
             static_folder='../client/static',
             template_folder='../client/html')
@@ -11,6 +11,8 @@ def app():
 
     return app
 
+"""
 def run():
-    app = app()
+    app = get_app()
     app.run(debug=True, port=1337)
+"""
