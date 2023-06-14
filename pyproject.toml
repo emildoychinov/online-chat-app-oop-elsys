@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "web-chat"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+license = "GPL V3.0"
+readme = "README.md"
+packages = [{include = "web_chat"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^2.3.2"
+flask-socketio = "^5.3.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+srv = 'web_chat.main:run'
