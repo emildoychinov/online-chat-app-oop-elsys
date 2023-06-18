@@ -19,7 +19,15 @@ class FlaskServer(AbsServer, metaclass=Singleton):
         def home():
             return render_template('index.html')
 
+        def auth():
+            return render_template('auth.html')
+
+        def rooms():
+            return render_template('rooms.html')
+
         self.__handle__('/', home)
+        self.__handle__('/auth', auth)
+        self.__handle__('/rooms', rooms)
 
 
     def run(self):

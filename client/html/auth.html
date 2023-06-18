@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<title>RMNDR</title>
+
+		<link rel="stylesheet" href="static/css/auth.css">
+
+		<script defer src="static/js/auth.js"> </script>
+	</head>
+
+	<body>
+		<div class="auth-container"> 
+			<form class="auth-content"> 
+				<h1 class="auth-title"> Sign up </h1>
+
+				<label for="username"> Username </label> 
+				<input type="text" id="username" placeholder="Username"> 
+
+				<label for="password"> Password </label>
+				<input type="password" id="password" placeholder="Password">
+
+				<label class="confirm-password-field" for="confirm-password"> Confirm Password </label>
+				<input type="password" id="confirm-password" placeholder="Confirm Password">
+
+				<p class="auth-change"> Already have an account? 
+					<a href="/auth?mode=SIGN_IN">Sign in</a>
+				</p>
+
+				<button type="button" id="submit"> Submit </button>
+			</form>
+		</div>
+	</body>
+</html>
