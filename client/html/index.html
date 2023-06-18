@@ -9,8 +9,8 @@
 
     <link rel="stylesheet" href="static/css/style.css">
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
-	<script src="static/js/index.js"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+	<script defer src="static/js/index.js"></script>
   </head>
 
   <body>
@@ -25,25 +25,14 @@
 	</div>
 
 	<h2 class="rooms-main">Select a room to join:</h2>
-	<div class="rooms-container">
-		<h4 class="room"> room1 </h4>
-		<h4 class="room"> room2 </h4>
-		<h4 class="room"> room3 </h4>
-		<h4 class="room"> room4 </h4>
-		<h4 class="room"> room5 </h4>
-		<h4 class="room"> room6 </h4>
-	</div>
+	<div id = 'room-container' class="rooms-container"></div>
 
 	<div class="chat-container">
 		<div class="chat">
-			<div class="chat-box">
-				<div class="sent">Person A: Hello!</div>
-				<div class="msg">Person B: Hi there!</div>
-				<div class="msg">Person B: How are you?</div>
-			</div>
+			<div class="chat-box"></div>
 
 			<div class="msg-input">
-				<input type="text" placeholder="Type your message">
+				<input id = 'message' type="text" placeholder="Type your message">
 				<button id="sendBtn">Send</button>
 			</div>
 		</div>

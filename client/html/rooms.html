@@ -8,8 +8,8 @@
 		<title>RMNDR</title>
 
 		<link rel="stylesheet" href="static/css/auth.css">
-
-		<script defer src="static/js/auth.js"> </script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+		<script defer src="static/js/rooms.js"> </script>
 	</head>
 
 	<body>
@@ -21,7 +21,7 @@
 				<input type="text" id="username" placeholder="Name"> 
 
 				<label for="password"> Members </label>
-				<input type="password" id="password" placeholder="Member1, Member2, ...">
+				<input type="text" id="password" placeholder="Member1, Member2, ...">
 
 				<button type="button" id="submit"> Create </button>
 			</form>
