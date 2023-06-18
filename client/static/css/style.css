@@ -1,3 +1,143 @@
 body {
-	color: green;
+	margin: 0;
+
+	background-color: #fafafa;
+    color: #0C0C0C;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+    background-color: #62dff5;
+	height: 6vh;
+	width: 100vw;
+}
+
+.navbar-img-container {
+	background-color: #fafafa;
+	border-radius: 45%;
+	height: 4.5vh;
+	width: 4.5vh;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	margin-left: 2vh;
+	margin-right: 2vh;
+}
+
+.navbar-img-container > a > img {
+	height: 2.75vh;
+	width: 2.75vh;
+	margin-top: 0.35vh;
+}
+
+.rooms-main {
+	text-align: center;
+}
+
+.rooms-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	width: 100vw;
+	height: 5vh;
+	background-color: #fafafa;
+}
+
+.room {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 1rem;
+
+	width: 8vw;
+	height: 3vh;
+    background-color: #62dff5;
+
+	margin-left: 0.5vw;
+	margin-right: 0.5vw;
+}
+
+.chat-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 60vh;
+}
+
+.chat {
+	display: flex;
+	flex-direction: column;
+	width: 65vw;
+	height: 50vh;
+	padding: 1vh;
+
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.chat-box {
+	height: 100%;
+	width: 100%;
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.chat-box::-webkit-scrollbar { 
+    display: none;
+}
+
+.msg {
+	margin-bottom: 10px;
+	padding: 5px 10px;
+	border-radius: 4px;
+	background-color: #e6f2ff;
+}
+
+.sent {
+	margin-bottom: 10px;
+	padding: 5px 10px;
+	border-radius: 4px;
+	background-color: #eaeaea;
+}
+
+.msg-input {
+	align-self: flex-end;
+
+	display: flex;
+	flex-direction: row;
+
+	width: 100%;
+}
+
+.msg-input input {
+	width: 90%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-right: 10px;
+}
+
+.msg-input button {
+	width: 12%;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.msg-input button:hover {
+	background-color: #0056b3;
 }

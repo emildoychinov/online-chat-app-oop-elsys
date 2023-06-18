@@ -4,7 +4,6 @@ from .abstract import *
 from .flask import FlaskServer 
 
 class SocketServer(AbsServer, metaclass=Singleton):
-    #__metaclass__ = Singleton
     sio = SocketIO()
     flsk = FlaskServer()
 
@@ -15,14 +14,10 @@ class SocketServer(AbsServer, metaclass=Singleton):
         def conn(sid):
             print(f'${sid} connected')
 
-        def disconn(sid):
-            print(f'${sid} disconnected')
-
         def custom(json):
             print('received json: ' + str(json))
 
         self.__handle__('connect', conn)
-        self.__handle__('disconnect', disconn)
         self.__handle__('my event', custom)
 
         self.sio.init_app(self.flsk.app, cors_allowed_origins='*') 
