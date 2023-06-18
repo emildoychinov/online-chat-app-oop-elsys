@@ -1,5 +1,7 @@
-from . import sio
+from .server import * 
 
 def run():
-    sio.run()
-
+    srv = SocketServer()
+    srv.run()
+    #srv2 = SocketServer()
+    #print(srv is srv2)
