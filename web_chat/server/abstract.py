@@ -11,7 +11,7 @@ class Singleton(type):
 
 # an abstract server class
 class AbsServer:
-    port = 8080 
+    port = 80 
     debug = True
 
     # a private function to handle an endpoint
