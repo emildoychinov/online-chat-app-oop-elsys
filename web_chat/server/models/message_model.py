@@ -15,8 +15,11 @@ class message(Model):
     content = columns.Text()
 
 class messageProcessor(modelProcessor):
+    @staticmethod
     def writeModel(self, ownerid, username, roomid, message_cnt):
             self.model.create(owner_id = ownerid, username = username, room_id = roomid, time_sent = datetime.now(), content=message_cnt)
+
+    @staticmethod
     def readModel(self, roomid):
         try :
             msgs = self.model.objects(room_id = roomid)

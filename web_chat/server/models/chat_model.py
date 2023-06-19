@@ -14,8 +14,11 @@ class chat_room(Model):
     users = columns.Set(columns.UUID, default = uuid.uuid4, index=True)
 
 class chatProcessor(modelProcessor):
+    @staticmethod
     def writeModel(self, ownerid, chat_name, chat_users):
             self.model.create(owner_id = ownerid, name = chat_name, users=list(chat_users))
+
+    @staticmethod
     def readModel(self, name):
         try :
               room = self.model.get(name = name)
@@ -23,6 +26,7 @@ class chatProcessor(modelProcessor):
              return None
         return room         
     
+    @staticmethod
     def readUserRooms(self, uid):
         try :
             result = self.model.objects.all()

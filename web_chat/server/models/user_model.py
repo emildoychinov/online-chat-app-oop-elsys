@@ -11,8 +11,11 @@ class user(Model):
     password = columns.Text()
 
 class userProcessor(modelProcessor):
+    @staticmethod
     def writeModel(self, usr, passwd):
             self.model.create(username=usr, password=passwd)
+
+    @staticmethod
     def readModel(self, usr):
         try : 
             u = self.model.get(username=usr)
@@ -20,6 +23,7 @@ class userProcessor(modelProcessor):
              return None
         return u
     
+    @staticmethod
     def readById(self, uuid):
         try :
             u = self.model.get(user_id = uuid)
